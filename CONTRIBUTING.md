@@ -84,9 +84,9 @@ Add this at the very top of your `.mdx` file before any content:
 ```yaml
 ---
 layout: ../layouts/ExhibitLayout.astro
-title: "Your Title Here"
-description: "A short description of your topic."
-author: "Surname, Firstname; Surname2, Firstname2"
+title: "ARPANET TO WWW"
+description: "This project explores the evolution of computing from ARPANET to the World Wide Web, focusing on computer architecture concepts that helped shape the modern systems we see today. The exhibit highlights early limitations in hardware and communication systems, which led to the development of more efficient data transmission methods like packet switching and protocol layering. It also explains how systems like ARPANET allowed computers to connect without relying on a central system, how TCP/IP made it possible for different computers to communicate even without having the same architecture or “language,” and how the World Wide Web made the internet easy to use through websites and browsers."
+author: "Borbe, Ken Marthin; Obar, David Angelo; Zerna, Ronin; Garzon , Harris"
 readingTime: "67 minutes"
 ---
 ```
