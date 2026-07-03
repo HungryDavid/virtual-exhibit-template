@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 export default function Game(){
   const [step, setStep] = useState('terminal'); // 'terminal', 'web', 'success'
   const [input, setInput] = useState('');
@@ -44,7 +42,7 @@ export default function Game(){
           <div className="bg-black text-green-400 font-mono p-4 rounded h-100 overflow-y-auto border-2 border-green-600">
             {history.map((line, idx) => <div key={idx}>{line}</div>)}
             <div className="flex">
-              <span>&gt;&nbsp;</span>
+              <span>{'> '} </span>
               <input 
                 type="text" 
                 value={input}
