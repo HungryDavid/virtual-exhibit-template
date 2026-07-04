@@ -75,6 +75,7 @@ export default function App() {
         </div>
       )}
 
+      {/**galleries */}
       {currentView === 'darpa' && (
         <div className="flex flex-col">
           <div className="flex-grow">

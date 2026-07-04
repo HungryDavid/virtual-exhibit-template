@@ -1,9 +1,9 @@
 export default function Foundation({ setCurrentView }) {
   const milestones = [
-    { year: '1958', title: 'DARPA founded' },
-    { year: '1965', title: 'First Wide-Area Network Experiment' },
-    { year: '1969', title: 'First ARPANET message' },
-    { year: '1971', title: 'The first Email' },
+    { year: '1958', title: 'DARPA founded', name: 'darpa' },
+    { year: '1965', title: 'First Wide-Area Network Experiment', name: 'wideArea' },
+    { year: '1969', title: 'First ARPANET message', name: 'arpanet' },
+    { year: '1971', title: 'The first Email', name: 'email' },
   ];
 
   return (
@@ -17,15 +17,15 @@ export default function Foundation({ setCurrentView }) {
             <h3 className="font-bold text-center mb-2 w-70 text-white">{m.title}</h3>
             
             {/* Image Placeholder */}
-            <div 
-              onClick={() => {
-                if (i === 0) setCurrentView('darpa');
-                else if (i === 1) setCurrentView('wideArea');
-                else if (i === 2) setCurrentView('arpanet');
-                else {setCurrentView('email');} 
-              }}
+            <div onClick={() => {setCurrentView(m.name)}}
               className="w-75 h-70 bg-gray-200 rounded-lg flex items-center justify-center border border-gray-300 cursor-pointer hover:bg-gray-300 transition-colors"
-            > Image {i + 1}
+            > 
+              Image {i + 1}
+              <img 
+                src={m.image} 
+                alt={m.title} 
+                className="w-full h-full object-cover" 
+              />
             </div>
 
             {/* Bottom Label (Year) */}
