@@ -1,8 +1,12 @@
 import { useState } from 'react'; 
+// interactive activity
 import Game from './Game.jsx';
+// galleries
 import Foundation from './Foundations.jsx';
 import Structure from './Structures.jsx';
 import Birth from './Birth.jsx';
+// timelines
+import * as G1 from './Gallery1.jsx'
 import '../styles/tailwind.css';
 
 export default function App() {
@@ -24,7 +28,7 @@ export default function App() {
       {currentView === 'foundation' && (
         <div className="flex flex-col">
           <div className="flex-grow">
-            <Foundation />
+            <Foundation setCurrentView={setCurrentView} />
           </div>
           
           <div className="flex justify-end w-full px-16 pb-10 font-bold text-lg text-white">
@@ -67,6 +71,14 @@ export default function App() {
         <div className="flex flex-col">
           <div className="flex-grow">
             <Game />
+          </div>
+        </div>
+      )}
+
+      {currentView === 'darpa' && (
+        <div className="flex flex-col">
+          <div className="flex-grow">
+            <G1.Darpa />
           </div>
         </div>
       )}

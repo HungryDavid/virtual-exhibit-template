@@ -1,4 +1,4 @@
-export default function Foundation() {
+export default function Foundation({ setCurrentView }) {
   const milestones = [
     { year: '1958', title: 'DARPA founded' },
     { year: '1965', title: 'First Wide-Area Network Experiment' },
@@ -17,10 +17,14 @@ export default function Foundation() {
             <h3 className="font-bold text-center mb-2 w-70 text-white">{m.title}</h3>
             
             {/* Image Placeholder */}
-            <div className="w-75 h-70 bg-gray-200 rounded-lg flex items-center justify-center border border-gray-300">
-              Image {i + 1}
+            <div 
+              onClick={() => {
+                if (i === 0) setCurrentView('darpa'); // Only the first image triggers 'game'
+              }}
+              className="w-75 h-70 bg-gray-200 rounded-lg flex items-center justify-center border border-gray-300 cursor-pointer hover:bg-gray-300 transition-colors"
+            > Image {i + 1}
             </div>
-            
+
             {/* Bottom Label (Year) */}
             <p className="bg-white mt-2 text-lg font-mono text-black rounded-xl px-10">{m.year}</p>
           </div>
