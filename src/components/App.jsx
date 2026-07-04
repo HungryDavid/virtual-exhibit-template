@@ -1,27 +1,75 @@
-import React, { useState } from 'react'; // <--- Added 'useState' here
+import { useState } from 'react'; 
 import Game from './Game.jsx';
-import Evolution from './Evolution.jsx';
+import Foundation from './Foundations.jsx';
+import Structure from './Structures.jsx';
+import Birth from './Birth.jsx';
 import '../styles/tailwind.css';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState('evolution');
+  const [currentView, setCurrentView] = useState('start');
 
   return (
-    <main>
-      {currentView === 'evolution' && (
-        <>
-          <Evolution />
-          <div className="flex justify-end w-full px-30">
-            <button 
-              onClick={() => setCurrentView('game')}
-              className="flex items-center gap-2 mt-10 text-lg font-bold hover:text-blue-600 transition-colors"
-            >
-              Next: Terminal Game <span>&rarr;</span>
+    <main className="min-h-screen bg-black">
+      {currentView === 'start' && (
+        <div className="flex flex-col items-center justify-center h-screen">
+          <p className="px-20 py-4 text-white rounded-lg text-5xl font-bold max-w-[450px] text-center">THE INTERNET'S JOURNEY</p>
+          <button 
+            onClick={() => setCurrentView('foundation')}
+            className="px-8 py-4 bg-black text-white border-white border-2 rounded-lg text-xl font-bold hover:bg-gray-700 transition-all"
+          > Let's Start
+          </button>
+        </div>
+      )}
+      
+      {currentView === 'foundation' && (
+        <div className="flex flex-col">
+          <div className="flex-grow">
+            <Foundation />
+          </div>
+          
+          <div className="flex justify-end w-full px-16 pb-10 font-bold text-lg text-white">
+            <button onClick={() => setCurrentView('structure')}>
+              Next: Structure &rarr;
             </button>
           </div>
-        </>
+        </div>
       )}
-      {currentView === 'game' && <Game />}
+
+      {currentView === 'structure' && (
+        <div className="flex flex-col">
+          <div className="flex-grow">
+            <Structure />
+          </div>
+          
+          <div className="flex justify-end w-full px-16 pb-10 font-bold text-lg text-white">
+            <button onClick={() => setCurrentView('birth')}>
+              Next: Birth &rarr;
+            </button>
+          </div>
+        </div>
+      )}
+
+      {currentView === 'birth' && (
+        <div className="flex flex-col">
+          <div className="flex-grow">
+            <Birth />
+          </div>
+          
+          <div className="flex justify-end w-full px-16 pb-10 font-bold text-lg text-white">
+            <button onClick={() => setCurrentView('game')}>
+              Next: Game &rarr;
+            </button>
+          </div>
+        </div>
+      )}
+      
+      {currentView === 'game' && (
+        <div className="flex flex-col">
+          <div className="flex-grow">
+            <Game />
+          </div>
+        </div>
+      )}
     </main>
   );
 }

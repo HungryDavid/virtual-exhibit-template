@@ -1,4 +1,6 @@
+import { useState } from 'react'; 
 export default function Game(){
+  console.log("Game component loaded!");
   const [step, setStep] = useState('terminal'); // 'terminal', 'web', 'success'
   const [input, setInput] = useState('');
   const [history, setHistory] = useState([
@@ -36,9 +38,9 @@ export default function Game(){
     <div className="m-20 p-6 max-w-2xl mx-auto rounded-xl font-sans">
       {step === 'terminal' && (
         <div>
-          <h2 className="text-2xl font-bold mb-2">Mini-Activity</h2>
-          <h3 className="text-xl font-bold mb-2">Phase 1: The Pre-Web Era (Command Line)</h3>
-          <p className="mb-4 text-sm text-gray-600">Task: Find and open "proposal_1989.txt". Use commands like 'ls' or 'cd'.</p>
+          <h2 className="text-2xl font-bold mb-2 text-white">Mini-Activity</h2>
+          <h3 className="text-xl font-bold mb-2 text-white">Phase 1: The Pre-Web Era (Command Line)</h3>
+          <p className="mb-4 text-sm text-gray-400">Task: Find and open "proposal_1989.txt". Use commands like 'ls' or 'cd'.</p>
           <div className="bg-black text-green-400 font-mono p-4 rounded h-100 overflow-y-auto border-2 border-green-600">
             {history.map((line, idx) => <div key={idx}>{line}</div>)}
             <div className="flex">
