@@ -19,7 +19,10 @@ export default function Foundation({ setCurrentView }) {
             {/* Image Placeholder */}
             <div 
               onClick={() => {
-                if (i === 0) setCurrentView('darpa'); // Only the first image triggers 'game'
+                if (i === 0) setCurrentView('darpa');
+                else if (i === 1) setCurrentView('wideArea');
+                else if (i === 2) setCurrentView('arpanet');
+                else {setCurrentView('email');} 
               }}
               className="w-75 h-70 bg-gray-200 rounded-lg flex items-center justify-center border border-gray-300 cursor-pointer hover:bg-gray-300 transition-colors"
             > Image {i + 1}
