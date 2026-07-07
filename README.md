@@ -89,3 +89,21 @@ The exhibit aims to help users:
 ## Project Scope
 
 This project focuses on conceptual understanding rather than technical implementation of full network systems. The exhibit will present simplified representations of complex technologies to enhance learning and engagement.
+
+## Development Log
+
+### As of 07/07/2026
+
+**Galleries (Origins, Structure, Birth)**
+- Gallery I — Origins (1958–1971): DARPA founding → first ARPANET message → first email
+- Gallery II — Structure (1973–1985): international ARPANET expansion → TCP proposal → TCP/IP standardization → DNS → first registered domain
+- Gallery III — Birth of the Public Web (1990–1991): WWW's creation at CERN and ARPANET's shutdown, then public introduction in 1991
+
+**Interactive Activity (Game component)**
+- Terminal-command phase (pre-Web, 1983-style CLI) vs. hypertext-click phase (post-Web)
+
+**View Navigation (App.jsx)**
+- Single-page state-based routing (`currentView`) tying all galleries + game together
+
+**Challenges**
+- Finding images that fit well with the fixed gallery card dimensions without looking cropped or stretched
