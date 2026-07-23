@@ -31,7 +31,6 @@ export default function Gallery({ title, subtitle, milestones, accent = '#f59e0b
           </h2>
         </div>
 
-        {/* Outer scroll wrapper constrained to webpage width */}
         <div className="w-full overflow-x-auto pb-6 px-6 md:px-16">
           <div className="flex items-center gap-10 w-max mx-auto">
             {milestones.map((m, i) => (
