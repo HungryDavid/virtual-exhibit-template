@@ -29,7 +29,7 @@ export default function App() {
             <div className="p-8 bg-black/40 border border-white/10 rounded-2xl backdrop-blur-sm">
               <h3 className="text-2xl font-bold text-white mb-4">About the Exhibit</h3>
               <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                This virtual exhibit explores the fascinating evolution of the internet—tracing its roots from early academic packet-switching experiments like ARPANET, through structural protocol standards, all into the birth of the modern web.
+                This virtual exhibit explores the fascinating evolution of the internet, tracing its roots from early academic packet-switching experiments like ARPANET, through structural protocol standards, all into the birth of the modern web.
               </p>
             </div>
 
