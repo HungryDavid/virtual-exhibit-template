@@ -31,7 +31,7 @@ export default function Gallery({ title, subtitle, milestones, accent = '#f59e0b
           </h2>
         </div>
 
-        <div className="flex items-center justify-center gap-10 overflow-x-auto pb-6">
+        <div className="flex items-center gap-10 overflow-x-auto pb-6 px-10 md:px-16 w-max mx-auto">
           {milestones.map((m, i) => (
             <button
               key={m.year + m.title}
