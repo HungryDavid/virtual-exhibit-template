@@ -21,8 +21,8 @@ export default function Gallery({ title, subtitle, milestones, accent = '#f59e0b
 
   return (
     <>
-      <div className="px-6 py-20 md:px-16">
-        <div className="text-center mb-14">
+      <div className="py-20">
+        <div className="text-center mb-14 px-6 md:px-16">
           <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: accent, opacity: 0.85 }}>
             {subtitle}
           </p>
@@ -31,51 +31,54 @@ export default function Gallery({ title, subtitle, milestones, accent = '#f59e0b
           </h2>
         </div>
 
-        <div className="flex items-center gap-10 overflow-x-auto pb-6 px-10 md:px-16 w-max mx-auto">
-          {milestones.map((m, i) => (
-            <button
-              key={m.year + m.title}
-              onClick={() => setSelectedIndex(i)}
-              className="group flex flex-col items-center flex-none focus:outline-none opacity-0"
-              style={{
-                animation: 'fadeInUp 0.6s ease-out forwards',
-                animationDelay: `${i * 0.15}s`,
-              }}
-            >
-              <h3 className="font-semibold text-center mb-3 w-64 text-white/90 text-sm md:text-base">
-                {m.title}
-              </h3>
-
-              <div
-                className="relative w-64 h-64 md:w-72 md:h-72 rounded-lg overflow-hidden border transition-shadow duration-300"
-                style={{ borderColor: `${accent}40` }}
-                onMouseEnter={(e) => (e.currentTarget.style.boxShadow = `0 0 30px ${accent}55`)}
-                onMouseLeave={(e) => (e.currentTarget.style.boxShadow = 'none')}
+        {/* Outer scroll wrapper constrained to webpage width */}
+        <div className="w-full overflow-x-auto pb-6 px-6 md:px-16">
+          <div className="flex items-center gap-10 w-max mx-auto">
+            {milestones.map((m, i) => (
+              <button
+                key={m.year + m.title}
+                onClick={() => setSelectedIndex(i)}
+                className="group flex flex-col items-center flex-none focus:outline-none opacity-0"
+                style={{
+                  animation: 'fadeInUp 0.6s ease-out forwards',
+                  animationDelay: `${i * 0.15}s`,
+                }}
               >
-                <img
-                  src={m.img.src}
-                  alt={m.title}
-                  className="w-full h-full object-cover grayscale-[20%] transition-all duration-500 ease-out group-hover:scale-110 group-hover:grayscale-0"
-                />
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 pointer-events-none" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100">
-                  <span
-                    className="text-white text-xs tracking-wide uppercase px-3 py-1 rounded-full"
-                    style={{ background: `${accent}dd` }}
-                  >
-                    View details
-                  </span>
+                <h3 className="font-semibold text-center mb-3 w-64 text-white/90 text-sm md:text-base">
+                  {m.title}
+                </h3>
+
+                <div
+                  className="relative w-64 h-64 md:w-72 md:h-72 rounded-lg overflow-hidden border transition-shadow duration-300"
+                  style={{ borderColor: `${accent}40` }}
+                  onMouseEnter={(e) => (e.currentTarget.style.boxShadow = `0 0 30px ${accent}55`)}
+                  onMouseLeave={(e) => (e.currentTarget.style.boxShadow = 'none')}
+                >
+                  <img
+                    src={m.img.src}
+                    alt={m.title}
+                    className="w-full h-full object-cover grayscale-[20%] transition-all duration-500 ease-out group-hover:scale-110 group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-white/10 pointer-events-none" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100">
+                    <span
+                      className="text-white text-xs tracking-wide uppercase px-3 py-1 rounded-full"
+                      style={{ background: `${accent}dd` }}
+                    >
+                      View details
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              <p
-                className="mt-3 text-base font-mono text-black rounded-full px-6 py-1 group-hover:scale-105 transition-transform"
-                style={{ background: accent }}
-              >
-                {m.year}
-              </p>
-            </button>
-          ))}
+                <p
+                  className="mt-3 text-base font-mono text-black rounded-full px-6 py-1 group-hover:scale-105 transition-transform"
+                  style={{ background: accent }}
+                >
+                  {m.year}
+                </p>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
