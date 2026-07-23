@@ -99,6 +99,8 @@ export default function App() {
           </div>
           <div className="flex justify-start w-full px-16 pb-10 font-bold text-lg text-white">
             <button onClick={() => setCurrentView('birth')}>&larr; Previous: Birth</button>
+            <button onClick={() => setCurrentView('start')}>Next: Back to Home &rarr;</button>
+
           </div>
         </div>
       )}

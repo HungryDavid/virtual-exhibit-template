@@ -1,6 +1,7 @@
 export default function Breadcrumb({ currentView, setCurrentView }) {
   const steps = [
-    { key: 'foundation', label: 'Origins' },
+    { key: 'start', label: 'Home' },
+    { key: 'foundation', label: 'Foundations' },
     { key: 'structure', label: 'Structure' },
     { key: 'birth', label: 'Birth' },
     { key: 'game', label: 'Game' },
