@@ -17,7 +17,7 @@ export default function App() {
           <button 
             onClick={() => setCurrentView('foundation')}
             className="px-8 py-4 bg-black text-white border-white border-2 rounded-lg text-xl font-bold hover:bg-gray-700 transition-all"
-          > Let's Star
+          > Let's Start
           </button>
         </div>
       )}
