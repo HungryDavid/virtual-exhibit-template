@@ -109,3 +109,7 @@ This project focuses on conceptual understanding rather than technical implement
 
 **Challenges**
 - Finding images that fit well with the fixed gallery card dimensions without looking cropped or stretched
+- Completing the project while learning new tools such as react, tailwindcss and astro
+- Ensuring heavy web galleries, interactive terminal components, and multimedia load efficiently without causing layout shifts or lag
+- Ensuring fixed gallery cards and retro UI elements scale cleanly
+- Time constraints due to other activities and or exams
