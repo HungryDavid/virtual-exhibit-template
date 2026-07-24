@@ -1,5 +1,7 @@
 # CSARCH2 Virtual Exhibit Proposal: ARPANET to World Wide Web
 
+> **Live Website:** [https://hungrydavid.github.io/virtual-exhibit-template/](https://hungrydavid.github.io/virtual-exhibit-template/)
+
 ## Course
 
 **CSARCH2 – Computer Architecture**
